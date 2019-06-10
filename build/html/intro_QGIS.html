@@ -1,0 +1,754 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Taller: Novedades de QGIS, desde “Girona” hasta “Noosa” &#8212; Taller: Novedades de QGIS 3.x</title>
+    <link rel="stylesheet" href="_static/groundwork.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Índex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
+    <link rel="prev" title="Documentación del Taller: QGIS desde Girona hasta Noosa." href="index.html" />
+
+
+    <link media="only screen and (max-device-width: 480px)" href="_static/small_groundwork.css" type= "text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+    <!-- Place this tag in your head or just before your close body tag. -->
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegació</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="Índex General"
+             accesskey="I">índex</a></li>
+        <li class="right" >
+          <a href="index.html" title="Documentación del Taller: QGIS desde Girona hasta Noosa."
+             accesskey="P">anterior</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Taller: Novedades de QGIS 3.x</a> &#187;</li>
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+
+  <div class="section" id="taller-novedades-de-qgis-desde-girona-hasta-noosa">
+<h1>Taller: Novedades de QGIS, desde “Girona” hasta “Noosa”<a class="headerlink" href="#taller-novedades-de-qgis-desde-girona-hasta-noosa" title="Link permanent a aquest títol">¶</a></h1>
+<p>El taller, impartido en el marco de las Jornadas de SIG Libre de 2019, pretende dar a conocer algunas de las novedades y mejoras que presenta QGIS desde que se lanzó la primera <em>release</em> de la rama 3.x (Girona 3.0), y hasta la actualidad (Noosa 3.6). Entre estos dos hitos, se suceden las versiones 3.2 (Bonn) y 3.4 (Madeira). Esta última es la actual LTR o versión <em>Long Term Release</em>.</p>
+<p>El taller no tiene por objetivo realizar un repaso exhaustivo a todos los cambios y mejoras de estas versiones, pues para ello basta con consultar los sucesivos <em>changelog</em> que han sido publicados en el sitio web del proyecto. El objetivo es mostrar algunos de los cambios más significativos o que a nuestro criterio, pueden despertar mayor interés.</p>
+<div class="section" id="la-interfaz-grafica-de-usuario">
+<h2>1. La interfaz gráfica de usuario<a class="headerlink" href="#la-interfaz-grafica-de-usuario" title="Link permanent a aquest títol">¶</a></h2>
+<div class="section" id="ui-theme">
+<h3>1.1 UI Theme<a class="headerlink" href="#ui-theme" title="Link permanent a aquest títol">¶</a></h3>
+<p>Las versión 3.x de QGIS cuenta con dos interfaces gráficas adicionales a la que se instala y muestra por defecto: <em>Blend of Gray</em> y <em>Night Mapping</em>. Para alternar entre una interfaz y otra, es preciso acceder al menú <em>Settings &gt; Options</em>. En el apartado <em>General</em>, hay que modificar el parámetro <em>UI Theme</em>. Para hacer efectiva la selección realizada, resulta imprescindible reiniciar QGIS.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="_images/default.png" src="_images/default.png" />
+</div>
+<div class="figure align-center">
+<img alt="_images/night_mapping.png" src="_images/night_mapping.png" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="locator-bar-una-herramienta-de-busqueda-para-casi-todo">
+<h3>1.2 <em>Locator Bar</em>: una herramienta de búsqueda para casi todo<a class="headerlink" href="#locator-bar-una-herramienta-de-busqueda-para-casi-todo" title="Link permanent a aquest títol">¶</a></h3>
+<p>En el ángulo inferior izquierdo de la ventana de QGIS, existe un acceso a un buscador de múltiples elementos de QGIS. La celda de búsqueda <em>Locator bar</em> permite acceder de forma ágil y rápida a cualquier tipo de capa, elemento de la capa activa, algoritmo, parámetro de configuración, … implementando además, una función de filtro de resultados de la búsqueda. En base a un prefijo de búsqueda y un valor, la barra de localización identifica y muestra las diferentes opciones que responden a un patrón de búsqueda.</p>
+<div class="section" id="busqueda-de-un-elemento-de-cualquier-capa-o-de-la-capa-activa">
+<h4>1.2.1 Búsqueda de un elemento de cualquier capa, o de la capa activa.<a class="headerlink" href="#busqueda-de-un-elemento-de-cualquier-capa-o-de-la-capa-activa" title="Link permanent a aquest títol">¶</a></h4>
+<p>Utilizando los prefijos <strong>af</strong> o <strong>f</strong>, seguido de una cadena de texto o de un valor numérico, QGIS realiza un filtrado de entidades para mostrarnos el conjunto de elementos que responden al patrón de búsqueda y, automáticamente, al seleccionar cualquier registro, la vista del mapa se centra sobre los mismos.</p>
+<div class="figure align-center">
+<img alt="_images/af.gif" src="_images/af.gif" />
+</div>
+</div>
+<div class="section" id="busqueda-de-un-algoritmo">
+<h4>1.2.2 Búsqueda de un algoritmo<a class="headerlink" href="#busqueda-de-un-algoritmo" title="Link permanent a aquest títol">¶</a></h4>
+<p>Si por contra, antes de escribir el término de búsqueda tecleamos el prefijo <strong>a</strong>, obtendremos un acceso rápido a los algoritmos de procesamiento de QGIS que contienen el patrón de búsqueda, abriendo directamente su cuadro de diálogo al ser seleccionados.</p>
+<blockquote>
+<div><div class="figure align-center">
+<img alt="_images/locator_algorithm.gif" src="_images/locator_algorithm.gif" />
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="busqueda-de-algoritmos-de-edicion-directa-de-entidades">
+<h4>1.2.3 Búsqueda de algoritmos de edición directa de entidades<a class="headerlink" href="#busqueda-de-algoritmos-de-edicion-directa-de-entidades" title="Link permanent a aquest títol">¶</a></h4>
+<p>En el caso que no se desee acceder a la ventana de ejecución de un algoritmo, puede realizarse una búsqueda con el prefijo <strong>ef</strong> para acceder a una selección de algoritmos y herramientas que se ejecutan directamente sobre las entidades presentes de una capa (sobre todas o sobre las seleccionadas en el caso que las haya), sin generar por todo ello, una nueva capa como sí sucede al ejecutar un algoritmo cualquiera.</p>
+<div class="figure align-center">
+<img alt="_images/ef.gif" src="_images/ef.gif" />
+</div>
+</div>
+</div>
+<div class="section" id="nuevo-browser-el-explorador-de-ficheros-definitivo">
+<h3>1.3 Nuevo <em>Browser</em>: el explorador de ficheros definitivo<a class="headerlink" href="#nuevo-browser-el-explorador-de-ficheros-definitivo" title="Link permanent a aquest títol">¶</a></h3>
+<p>A partir de la publicación de la versión 3.x de QGIS, el explorador de ficheros o <em>browser</em> ha dejado de ser una mera aplicación independiente para pasar a formar parte del propio entorno de trabajo de QGIS, en forma de un nuevo panel que puede anclarse en cualquier parte de la interfaz gráfica de QGIS.</p>
+<p>A grandes rasgos, el nuevo explorador permite:</p>
+<ul class="simple">
+<li>Explorar y navegar por toda la estructura de carpetas de nuestro sistema.</li>
+<li>Mediante un clic con el botón derecho del mouse, se pueden crear nuevas carpetas y ficheros, acceder a la carpeta desde el explorador de ficheros del sistema, o desde el terminal. Así mismo, es posible acceder a las propiedades de las carpetas y de los ficheros.</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/browser1.gif" src="_images/browser1.gif" />
+</div>
+<ul class="simple">
+<li>Permite también crear nuevas carpetas dentro del propio sistema, así como nuevos ficheros de datos espaciales con formato <em>Geopackage</em> y <em>Shapefile</em>.</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/browser2.gif" src="_images/browser2.gif" />
+</div>
+<ul class="simple">
+<li>Permite la gestión de las capas de información geográfica que existan en el sistema, permitiendo su borrado o su exportación a nuevos formatos de datos espaciales.</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/browser3.gif" src="_images/browser3.gif" />
+</div>
+<ul class="simple">
+<li>Finalmente, el nuevo <em>browser</em> permite la exploración del contenido y de la estructura de las capas (grupos y capas en el panel de capas) de un proyecto de QGIS, sin necesidad de abrirlo.</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/browser4.gif" src="_images/browser4.gif" />
+</div>
+</div>
+</div>
+<div class="section" id="sobre-los-datos-y-el-formato-de-los-datos">
+<h2>2. Sobre los datos y el formato de los datos<a class="headerlink" href="#sobre-los-datos-y-el-formato-de-los-datos" title="Link permanent a aquest títol">¶</a></h2>
+<p><a class="reference external" href="https://www.geopackage.org/">Geopackage</a>, es ahora el nuevo formato de datos por defecto de QGIS. Así, desde el propio <em>Browser</em> o explorador de QGIS, se pueden crear nuevos ficheros en formato <em>Geopackage</em>.</p>
+<div class="figure align-center">
+<img alt="_images/gpkg1.gif" src="_images/gpkg1.gif" />
+</div>
+<p>Una vez creado un fichero <em>Geopackage</em>, su gestión puede realizarse enteramente desde el menú <em>Database &gt; DB Manager</em>: crear, editar o eliminar cualquier tabla, vaciarla de contenido o exportarlo.</p>
+<div class="figure align-center">
+<img alt="_images/gpkg2.gif" src="_images/gpkg2.gif" />
+</div>
+<p>Existen varias formas de importar datos en cualquier formato a un fichero <em>Geopackage</em> pero, sin duda una de las más sencillas se limita en arrastrar cualquier capa presente en el panel de capas, hasta la conexión del <em>Geopackage</em> de trabajo o de destino, visible dentro del panel del explorador o <em>browser</em>:</p>
+<div class="figure align-center">
+<img alt="_images/gpkg3.gif" src="_images/gpkg3.gif" />
+</div>
+</div>
+<div class="section" id="sobre-las-propiedades-del-proyecto-y-el-canvas">
+<h2>3. Sobre las propiedades del proyecto y el <em>canvas</em><a class="headerlink" href="#sobre-las-propiedades-del-proyecto-y-el-canvas" title="Link permanent a aquest títol">¶</a></h2>
+<p>Las versiones 3.x de QGIS también traen alguna que otra novedad por lo que a las propiedades del proyecto se refiere, así como algunos nuevos elementos en el <em>map canvas</em> o ventana de mapa, como es la inclusión de nuevas variables así como nuevos decoradores del mapa.</p>
+<p>A fin de practicar con estos nuevos elementos será preciso abrir el proyecto <strong>lavajol.qgz</strong> que se encuentra entre el conjunto de datos para llevar a cabo el taller. Este proyecto contiene cartografía original y derivada cuyo origen es la Dirección General del Catastro de España, así como una tabla (ficticia) sobre un supuesto padrón de habitantes del municipio en cuestión (La Vajol, en el Alt Empordà).</p>
+<div class="figure align-center">
+<img alt="_images/la_vajol.png" src="_images/la_vajol.png" />
+</div>
+<p>Inicialmente este proyecto que acabamos de abrir, no muestra ningún tipo de información relativa ni al título del proyecto, ni al autor, ni otros elementos e informaciones que posteriormente utilizaremos para insertar un título y unos créditos en la ventana de mapa. Y para ello, se utilizaran alunas <strong>variables</strong> de QGIS.</p>
+<p>En primer lugar, es necesario abrir las propiedades del proyecto (<em>Project &gt; Properties</em>) y activar la pestaña <em>Metadata</em>. A continuación se asignará un título al proyecto y se añadirá el nombre del autor del mismo:</p>
+<div class="figure align-center">
+<img alt="_images/project1.png" src="_images/project1.png" />
+</div>
+<p>Aceptaremos los cambios y, al abrir nuevamente las propiedades del proyecto podremos comprobar como las variables <strong>&#64;project_author</strong> y <strong>&#64;project_title</strong> se han actualizado, y ahora son visibles dentro del correspondiente apartado <strong>Variables</strong>.</p>
+<p>A continuación, crearemos una nueva variable que responderá al nombre <strong>&#64;empresa</strong> (sin incluir la &#64; en el nombre), a la que asignaremos su correspondiente valor. Por ejemplo, <strong>SIGTE - Universitat de Girona</strong>.</p>
+<div class="figure align-center">
+<img alt="_images/project2.png" src="_images/project2.png" />
+</div>
+<p>Estas y más variables pueden utilizarse como valores para generar múltiples etiquetas y textos. En el caso de los decoradores de la ventana de mapa, se utilizaran en la etiqueta de título y en el apartado de créditos. Para ello es necesario activar el menú <em>View &gt; Decorations &gt; Title Label</em> y activar la casilla <em>Enable title label</em>. En este caso concreto, la etiqueta ya recoge directamente el valor de la variable <strong>&#64;project_title</strong> por lo que no será preciso realizar ninguna acción más a excepción de modificar, a criterio del usuario, el tipo de fuente, tamaño, color, la aplicación o no de un <em>buffer</em> alrededor del texto, …</p>
+<p>En el caso de los créditos, será necesario activar la opción correspondiente en el menú <em>View &gt; Decorations &gt; Copyright label</em>. En la ventana emergente, borraremos el contenido que aparece por defecto y realizaremos un clic sobre el botón <em>Insert an expression</em> dónde construiremos una expresión a base de concatenar variables y alguna que otra función:</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">@</span><span class="n">project_author</span><span class="o">||</span><span class="s">&#39;, &#39;</span><span class="o">||@</span><span class="n">empresa</span><span class="o">||</span><span class="s">&#39;, QGIS&#39;</span><span class="o">||@</span><span class="n">qgis_version</span><span class="o">||</span><span class="s">&#39;, &#39;</span><span class="o">||@</span><span class="n">project_crs</span><span class="o">||</span><span class="s">&#39;, (&#39;</span><span class="o">||</span><span class="nf">left</span><span class="p">(</span><span class="nf">now</span><span class="p">(),</span><span class="m">10</span><span class="p">)</span><span class="o">||</span><span class="s">&#39;)&#39;</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<img alt="_images/project3.png" src="_images/project3.png" />
+</div>
+<p>La última novedad que queremos destacar con relación a las propiedades del proyecto, es que ahora es posible determinar qué capas identificamos como imprescindibles para un proyecto cualquiera. Una vez marcadas como indispensables, no podrán eliminarse del panel de capas mientras estén marcadas como <strong>Required</strong>. Para ello basta con acceder a las propiedades del proyecto, dentro del apartado <em>Data sources</em>, y marcar la casilla <em>Required</em> para aquellas capas indispensables para el proyecto. De forma automática, en el panel de capas, éstas aparecerán con un nuevo icono en forma de candado.</p>
+<div class="figure align-center">
+<img alt="_images/project4.png" src="_images/project4.png" />
+</div>
+</div>
+<div class="section" id="mejoras-en-la-visualizacion-de-datos-simbolizacion">
+<h2>4. Mejoras en la visualización de datos: simbolización<a class="headerlink" href="#mejoras-en-la-visualizacion-de-datos-simbolizacion" title="Link permanent a aquest títol">¶</a></h2>
+<div class="section" id="alternativa-a-la-clasificacion-por-reglas-merge-categories">
+<h3>4.1 Alternativa a la clasificación por reglas: <em>Merge Categories</em><a class="headerlink" href="#alternativa-a-la-clasificacion-por-reglas-merge-categories" title="Link permanent a aquest títol">¶</a></h3>
+<p>Con relación al estilo aplicable a las capas vectoriales, cabe destacar que son varias las cuestiones que suponen una mejora o una nueva incorporación en la versión 3.x QGIS. Como consecuencia de la adopción del formato <em>Geopackage</em> como formato de datos por defecto, disponemos ahora de la posibilidad de almacenar, de forma ágil y sencilla, cualquier tipo de simbología en el mismo fichero <em>Geopackage</em> donde tenemos almacenados los datos.</p>
+<p>En el proyecto de La Vajol, puede comprobarse como en el caso de la capa de construcciones del catastro, se ha aplicado una simbología por reglas con el objetivo de diferenciar la diferente tipología de las construcciones presentes en la capa.</p>
+<div class="figure align-center">
+<img alt="_images/qgis_rules.gif" src="_images/qgis_rules.gif" />
+</div>
+<p>Para poder guardar o almacenar esta simbología relativa a las construcciones en un <em>Geopackage</em> es indispensable, lógicamente, que nuestros datos estén almacenados en un fichero de este tipo. Si esta condición se cumple, entonces desde el mismo apartado de simbología, en las propiedades de la capa, bastará con realizar un clic sobre el botón <em>Style</em> y a continuación, guardar el estilo en el <em>Geopackage</em> de trabajo o de destino:</p>
+<div class="figure align-center">
+<img alt="_images/qgis_rules2.gif" src="_images/qgis_rules2.gif" />
+</div>
+<p>Otra de las novedades de la versión 3.x por lo que a confección y organización de clases o categorías se refiere, es la posibilidad de unir varias de estas categorías o valores únicos bajo un mismo grupo. Esta nueva función permite organizar la leyenda y las categorías de igual modo como podemos hacerlo desde las propias reglas de clasificación, pero en lugar de organizar las clases en base a expresiones, puede hacerse de manera mucho más manual, seleccionando todas las categorías que se pretenden unir bajo una misma entrada, realizando un clic con el botón derecho del <em>mouse</em> y seleccionando la opción <strong>Merge categories</strong>.</p>
+<p>Como caso práctico, duplicaremos la capa de construcciones visible en el panel de capas, realizando un clic con el botón derecho del <em>mouse</em> y seleccionando la opción <em>Duplicate Layer</em>. Una vez duplicada la capa, la simbolizaremos por valores únicos a partir del campo <strong>[constru]</strong> y una vez aparezca la clasificación básica, seleccionaremos las categorías que pretendemos unir, y utilizaremos la función <em>Merge categories</em>:</p>
+<div class="figure align-center">
+<img alt="_images/qgis_rules3.gif" src="_images/qgis_rules3.gif" />
+</div>
+</div>
+<div class="section" id="nuevas-opciones-para-simbologia-de-puntos-point-cluster-renderer">
+<h3>4.2 Nuevas opciones para simbología de puntos: <em>Point cluster renderer</em><a class="headerlink" href="#nuevas-opciones-para-simbologia-de-puntos-point-cluster-renderer" title="Link permanent a aquest títol">¶</a></h3>
+<p>En el caso de las entidades de punto, la versión 3.x de QGIS también ofrece alguna novedad. Más concretamente se trata de una nueva posibilidad de mostrar los puntos de una capa: a través del <em>point cluster renderer</em>. Este modo de simbología, en función de la escala de visualización y de la distancia que se defina, agrupará todos aquellos puntos situados a una determinada distancia los unos de los otros, en un clúster o punto único, acompañado de un rótulo que informará del número de puntos que se están representando. Para comprobar su aplicación, es preciso contar con una capa de puntos como por ejemplo, una capa que nos muestre los supermercados de Girona, y fácilmente puede obtenerse con la <strong>API overpass turbo</strong>.</p>
+<p>Una vez cargada la capa en el panel de capas de QGIS, presionaremos la tecla F7 para abrir el panel de estilos, y sustituiremos el modo <em>Single symbol</em> por <em>Point cluster</em>. Desde el apartado <em>Cluster symbol</em> podemos controlar todos los aspectos relacionados con la apariencia del clúster mientras que, desde el apartado <em>Renderer settings</em>, se controlará el aspecto de todos aquellos puntos que no estén agrupados en un único clúster. Finalmente, desde el apartado <em>Distance</em> es posible definir la distancia a partir de la cual, deberás configurarse los diferentes clústeres de puntos.</p>
+<div class="figure align-center">
+<img alt="_images/point_cluster.gif" src="_images/point_cluster.gif" />
+</div>
+</div>
+</div>
+<div class="section" id="nuevas-opciones-de-join-1-n">
+<h2>5. Nuevas opciones de Join 1:n<a class="headerlink" href="#nuevas-opciones-de-join-1-n" title="Link permanent a aquest títol">¶</a></h2>
+<p>En QGIS, venia siendo habitual que los <em>joins</em> o enlaces de tablas se restringieran a las relaciones 1:1 mientras que, la necesidad de establecer una relación <strong>1:n</strong>, se solucionaba mediante la configuración de una relación desde las propiedades del proyecto. Actualmente, además de la relación anteriormente mencionada, QGIS cuenta con una nueva posibilidad accesible desde el <em>Processing toolbox</em> o bien des de la <em>Locator bar</em>.</p>
+<p>Practicaremos a continuación con esta nueva opción. Accederemos nuevamente al proyecto de La Vajol y comprobaremos como en el panel de capas existe una capa llamada <strong>PORTALES</strong>, así como una tabla llamada <strong>PADRON</strong>. Abriendo las propiedades del proyecto y accediendo al apartado <em>Relations</em>, puede comprobarse como ya existe una relación que vincula la tabla del padrón de habitantes ficticio, con la capa de portales, a partir de las columnas <strong>[direccion]</strong> y <strong>[domicilio]</strong>. Este es un claro ejemplo de relación 1:n solventado a través de una relación.</p>
+<div class="figure align-center">
+<img alt="_images/relacion1.png" src="_images/relacion1.png" />
+</div>
+<p>Para comprobar que efectivamente dicha relación está correctamente configurada y arroja los resultados esperados, basta con realizar un clic sobre algún elemento de la capa de portales con la herramienta <em>Identify features</em>:</p>
+<div class="figure align-center">
+<img alt="_images/realcion2.gif" src="_images/realcion2.gif" />
+</div>
+<p>En la barra de localización o <em>Locator bar</em>, escribiremos la palabra <strong>join</strong> para filtrar todos los algoritmos y seleccionar la herramienta <em>Join attribuites by field value</em>. En la ventana emergente, seleccionaremos <strong>PORTALES</strong> como capa de entrada, <strong>[direccion]</strong> como campo común, <strong>PADRON</strong> como capa/tabla a vincular y <strong>[domicilio]</strong> como campo para la vinculación. A continuación, seleccionaremos la opción <em>Create separate feature for each matching feature (one-to-many)</em>. Con ello se va a crear una nueva capa de puntos en la cual, en determinadas localizaciones, habrá tantas entidades de punto superpuestas entre sí, como individuos estén empadronados en un mismo portal.</p>
+<div class="figure align-center">
+<img alt="_images/relacion3.png" src="_images/relacion3.png" />
+</div>
+<p>Ahora, para poder visualizar correctamente todas y cada una de las entidades de punto superpuestas en la capa temporal que se acaba de generar, podemos utilizar la opción de simbolización que se presenta bajo el nombre <em>Point displacement</em>. Para ello hay que presionar la tecla F7 para abrir el panel de estilos y sustituir la opción <em>Single symbol</em> por el modo anteriormente mencionado. En este modo de simbolización, podemos controlar el diseño del punto central que hace referencia a la localización exacta de los elementos superpuestos, el diseño de los puntos que representa cada uno de los individuos vinculados a cada uno de los portales, así como la forma mediante la cual deberán mostrarse: en modo circular, en modo de cuadrícula, …</p>
+<div class="figure align-center">
+<img alt="_images/relacion4.gif" src="_images/relacion4.gif" />
+</div>
+<p>Una vez definida la simbología mediante estos puntos desplazados, es posible añadir una etiqueta para que muestre o bien el valor de alguno de los campos de la tabla de atributos (para cada uno de los puntos representados) desde el apartado <em>Labels</em>, o bien el recuento de entidades de punto que se superponen en cada una de las localizaciones o portales de la capa. En el primer caso, bastará con indicar el atributo a etiquetar (por ejemplo, el nombre), el tipo de fuente, el color y, si se desea, una escala mínima a partir de la cual mostrar las etiquetas en el mapa:</p>
+<div class="figure align-center">
+<img alt="_images/relacion5.png" src="_images/relacion5.png" />
+</div>
+<p>En el segundo caso, deberá haberse instalado previamente el complemento <em>refFunctions</em> y, en el apartado destinado a definir el contenido de la etiqueta, insertar la siguiente expresión (una combinación de cadena de texto y una función), y modificar los parámetros de visualización a criterio.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Padrón: &#39;</span> <span class="o">||</span> <span class="n">intersecting_geom_count</span><span class="p">(</span><span class="s1">&#39;Joined layer&#39;</span><span class="p">)</span><span class="o">||</span><span class="s1">&#39; individuo(s)&#39;</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<img alt="_images/relacion6.png" src="_images/relacion6.png" />
+</div>
+</div>
+<div class="section" id="edicion-de-datos-vectoriales">
+<h2>6. Edición de datos vectoriales<a class="headerlink" href="#edicion-de-datos-vectoriales" title="Link permanent a aquest títol">¶</a></h2>
+<p>A nivel de edición de entidades, las herramientas clásicas de digitalización de QGIS ofrecen también algunas mejoras y también algunas novedades especialmente con relación a la gestión y a la edición de vértices, así como las herramientas de digitalización avanzada, a las que se han añadido un mayor abanico de valores de ángulo sobre los cuales habilitar la función de <em>snapping</em>. Para ver todas y cada una de las mejoras en este sentido, os emplazamos a los diferentes <em>changelogs</em> de cada una de las versiones publicadas desde la <strong>3.0</strong> hasta la más reciente <strong>3.6</strong>.</p>
+<p><a class="reference external" href="https://qgis.org/en/site/forusers/visualchangelog30/#digitising">Changelog para la versión 3.0</a></p>
+<p><a class="reference external" href="https://qgis.org/en/site/forusers/visualchangelog34/#digitising">Changelog para la versión 3.4</a></p>
+<p><a class="reference external" href="https://qgis.org/en/site/forusers/visualchangelog36/#digitising">Changelog para la versión 3.6</a></p>
+<p>Además de lo anteriormente mencionado y que puede consultarse en los diferentes <em>changelogs</em>, resulta especialmente interesante el trabajo combinado de edición de entidades y vértices, apoyado en los paneles de <strong>digitalización avanzada</strong>, <strong>edición de vértices</strong> y <strong>rehacer/deshacer</strong>, tal y como se muestra a continuación:</p>
+<div class="figure align-center">
+<img alt="_images/editing_vertexs.gif" src="_images/editing_vertexs.gif" />
+</div>
+</div>
+<div class="section" id="edicion-manual-de-etiquetas">
+<h2>7. Edición manual de etiquetas<a class="headerlink" href="#edicion-manual-de-etiquetas" title="Link permanent a aquest títol">¶</a></h2>
+<p>La nueva versión de QGIS también viene con mejoras con relación al posicionamiento manual de etiquetas, de forma individualizada, así como la edición de cualquiera de sus propiedades. Desplazar, rotar y cambiar las propiedades de cada una de las etiquetas, de forma independiente, es ahora más fácil y más rápido:</p>
+<div class="figure align-center">
+<img alt="_images/editing_labels.gif" src="_images/editing_labels.gif" />
+</div>
+</div>
+<div class="section" id="trabajo-con-formularios-de-datos">
+<h2>8. Trabajo con formularios de datos<a class="headerlink" href="#trabajo-con-formularios-de-datos" title="Link permanent a aquest títol">¶</a></h2>
+<p>Con relación al trabajo con formularios, son dos los aspectos que suponen una mejora destacable. Por un lado, está la posibilidad de organizar los valores para la selección múltiple (opción relación de valores) en columnas. En segundo lugar, queremos destacar el diseño y la creación de formularios en cascada, que suponen otra notable mejora.</p>
+<p>Partiendo de la base que disponemos de un fichero <em>Geopackage</em> de trabajo, crearemos dos nuevas tablas sin geometría, con la estructura y el contenido que se muestra a continuación. Estas tablas serán las que utilizaremos posteriormente para configurar los formularios que deben permitir la digitalización y la codificación de unos atributos relativos a una construcción cualquiera. La particularidad en este caso, es que el formulario relativo a la tabla <strong>B</strong> (categoría detallada de la construcción) únicamente nos va a mostrar los únicos valores posibles a asignar teniendo en cuenta, el valor de la tabla <strong>A</strong> que se haya seleccionado con anterioridad. Así, el primer paso consistirá en crear estas dos tablas en un <em>Geopackage</em>. La <strong>tabla A</strong> llevará por nombre <strong>EDIF_PRAL</strong> mientras que, la <strong>tabla B</strong>, llevará por nombre <strong>EDIF_SEC</strong>.</p>
+<p><strong>TABLA A</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">cod_pral</th>
+<th class="head">tipo_edif</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>edif1</td>
+<td>Vivienda</td>
+</tr>
+<tr class="row-odd"><td>edif2</td>
+<td>Equipamiento</td>
+</tr>
+<tr class="row-even"><td>edif3</td>
+<td>Nave industrial</td>
+</tr>
+</tbody>
+</table>
+<p><strong>TABLA B</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">cod_edif_pral</th>
+<th class="head">categoria_edif</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>edif1</td>
+<td>Adosada</td>
+</tr>
+<tr class="row-odd"><td>edif1</td>
+<td>Pareada</td>
+</tr>
+<tr class="row-even"><td>edif1</td>
+<td>Aislada</td>
+</tr>
+<tr class="row-odd"><td>edif1</td>
+<td>En altura</td>
+</tr>
+<tr class="row-even"><td>edif2</td>
+<td>Cultural</td>
+</tr>
+<tr class="row-odd"><td>edif2</td>
+<td>Deportivo</td>
+</tr>
+<tr class="row-even"><td>edif2</td>
+<td>Sanitario</td>
+</tr>
+<tr class="row-odd"><td>edif2</td>
+<td>Educativo</td>
+</tr>
+<tr class="row-even"><td>edif2</td>
+<td>Protección</td>
+</tr>
+<tr class="row-odd"><td>edif3</td>
+<td>Tipo A</td>
+</tr>
+<tr class="row-even"><td>edif3</td>
+<td>Tipo B</td>
+</tr>
+<tr class="row-odd"><td>edif3</td>
+<td>Tipo C</td>
+</tr>
+</tbody>
+</table>
+<p>A continuación, crearemos una nueva capa de polígonos llamada <strong>construciones</strong>, que almacenará las geometrías y en cuya tabla definiremos dos nuevas columnas: <strong>TIPO</strong> y <strong>CATEGORIA</strong>. Una vez creada la capa y su tabla de atributos, realizaremos un doble clic sobre la misma para acceder a sus propiedades a la vez que activamos el apartado <em>Attributes Form</em>. Seleccionaremos la columna <strong>TIPO</strong> y definiremos un <em>widget</em> del tipo <em>Value relation</em>, a la vez que seleccionamos la capa <strong>EDIF_PRAL</strong> y las columnas <strong>cod_pral</strong> y <strong>tipo_edif</strong> para los parámetros <em>Key column</em> y <em>Value column</em>.</p>
+<div class="figure align-center">
+<img alt="_images/form1.gif" src="_images/form1.gif" />
+</div>
+<p>En segundo lugar, seleccionaremos la columna <strong>CATEGORIA</strong> y definiremos que el tipo de <em>widget</em> será igualmente <em>Value relation</em> pero esta vez, no nos limitaremos a seleccionar las correspondientes columnas de la tabla <strong>EDIF_SEC</strong> (lo que acabaría por mostrarnos todos los posibles valores de la tabla en cuestión), sino que en el apartado <em>Filter expression</em> introduciremos la siguiente expresión:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;cod_edif_pral&quot;</span><span class="o">=</span><span class="n">current_value</span><span class="p">(</span><span class="s1">&#39;TIPO&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<img alt="_images/form2.gif" src="_images/form2.gif" />
+</div>
+<p>Habiendo definido de esta manera el formulario en cascada, si procedemos a digitalizar una primera construcción para la posterior codificación de sus atributos, comprobaremos el funcionamiento de nuestro formulario:</p>
+<div class="figure align-center">
+<img alt="_images/form3.gif" src="_images/form3.gif" />
+</div>
+<p>Para dar por finalizado el tema de los formularios en las nuevas versiones de QGIS, otra de las mejoras que trae consigo la versión 3.x guarda relación, como ya se había comentado, con la posibilidad de organizar todos los posibles valores a escoger (dentro de un <em>widget</em> de relación de valores), cuando definimos la posibilidad de realizar una selección múltiple, en varias columnas:</p>
+<div class="figure align-center">
+<img alt="_images/form4.gif" src="_images/form4.gif" />
+</div>
+</div>
+<div class="section" id="wedge-buffer-capa-fisica-vs-simbologia">
+<h2>9. <em>Wedge buffer</em>: capa física vs. simbología<a class="headerlink" href="#wedge-buffer-capa-fisica-vs-simbologia" title="Link permanent a aquest títol">¶</a></h2>
+<div class="section" id="la-preparacion-de-los-datos">
+<h3>9.1 La preparación de los datos<a class="headerlink" href="#la-preparacion-de-los-datos" title="Link permanent a aquest títol">¶</a></h3>
+<p>Esta es una nueva tipología de <em>buffer</em> que puede obtenerse, como en otros casos, bien a través de un algoritmo para generar una nueva capa o bien, mediante una simbología con el generador de geometrías. Esta tipología de <em>buffer</em> resulta especialmente interesante para la simbolización, por ejemplo, de puntos de puntos de observación visual, toma de fotografías sobre el terreno, etcétera.</p>
+<p>Empezaremos creando un nuevo proyecto (EPSG:25831) y cargaremos la capa <strong>Ortofoto de Catalunya 1:1000 vigent</strong> mediante el WMS del ICGC (<a class="reference external" href="http://geoserveis.icgc.cat/icc_mapesbase/wms/service">http://geoserveis.icgc.cat/icc_mapesbase/wms/service</a>?). Nos moveremos a las coordenadas <strong>485374.229,4647759.978</strong>, a una escala de visualización de 1:1000. Finalmente, guardaremos el proyecto con el nombre <strong>Mapillary.qgz</strong>.</p>
+<p>Crearemos una nueva capa de puntos, a la que añadiremos tres nuevas columnas:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>nombre</strong> (cadena de texto)</li>
+<li><strong>azimuth</strong> (entero)</li>
+<li><strong>imagen</strong> (cadena de texto ilimitada)</li>
+</ul>
+</div></blockquote>
+<p>A continuación, pondremos la capa en edición y digitalizaremos tres puntos en los lugares que puedes ver en la siguiente animación y les asignaremos respectivamente, los nombres <strong>mapillary1</strong>, <strong>mapillary2</strong> y <strong>mapillary3</strong>:</p>
+<div class="figure align-center">
+<img alt="_images/wedge1.gif" src="_images/wedge1.gif" />
+</div>
+<p>Para cada uno de los puntos, vamos a introducir manualmente su correspondiente valor de azimut:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>mapillary1</strong>: 270</li>
+<li><strong>mapillary2</strong>: 175</li>
+<li><strong>mapillary3</strong>: 90</li>
+</ul>
+</div></blockquote>
+<p>Para terminar con la preparación de la capa, podemos abrir las propiedades de la misma y configurar un formulario para el campo o columna <strong>[imagen]</strong>. Escogeremos un <em>widget</em> del tipo <em>Attachment</em>, y seleccionaremos la carpeta que contiene las fotografías que pretendemos enlazar. Marcaremos la casilla que hace referencia a la opción <em>Relative to project path</em> y, como tipo de adjunto, escogeremos la opción <em>image</em>.</p>
+<p>A continuación, con la capa en modo de edición, seleccionaremos la herramienta <em>Identify features</em> y, realizando un clic sobre cada uno de los puntos previamente digitalizados, les asignaremos su correspondiente imagen contenida dentro de la carpeta <strong>Mapillary</strong>.</p>
+<div class="figure align-center">
+<img alt="_images/wedge2.gif" src="_images/wedge2.gif" />
+</div>
+</div>
+<div class="section" id="el-algoritmo-wedge-buffer">
+<h3>9.2 El algoritmo <em>wedge buffer</em><a class="headerlink" href="#el-algoritmo-wedge-buffer" title="Link permanent a aquest títol">¶</a></h3>
+<p>En el apartado <em>Locator bar</em>, teclearemos la palabra <em>wedge</em> y de entre las opciones que se mostrarán, escogeremos el algoritmo <em>Create wedge buffers</em>. En el cuadro de diálogo emergente, indicaremos que el valor relativo al parámetro azimut lo extraiga directamente de la correspondiente columna en la tabla de atributos (<strong>[azimuth]</strong>), definiremos una longitud de <strong>55</strong>, un radio exterior de <strong>50</strong> y un radio interior de <strong>5</strong>.</p>
+<div class="figure align-center">
+<img alt="_images/wedge3.gif" src="_images/wedge3.gif" />
+</div>
+<p>De este modo obtendremos esta nueva tipología de <em>buffer</em> que almacenaremos o podemos almacenar, en forma de una nueva capa de polígonos dentro de nuestro <em>Geopackage</em> de trabajo.</p>
+</div>
+<div class="section" id="la-simbolizacion-mediante-wedge-buffer">
+<h3>9.3 La simbolización mediante <em>wedge buffer</em><a class="headerlink" href="#la-simbolizacion-mediante-wedge-buffer" title="Link permanent a aquest títol">¶</a></h3>
+<p>Si por contra no deseamos generar una nueva capa sino que únicamente queremos utilizar este tipo de <em>buffer</em>, en forma de cuña, a efectos de simbolización, QGIS ofrece la posibilidad de convertir nuestra simbología básica de punto, en un <em>wedge buffer</em>, gracias al generador de geometrías. Para ello desactivaremos la visualización de la nueva capa que acabamos de generar en el paso anterior, y realizaremos un clic sobre la capa original que contiene los puntos, para indicar a QGIS que se trata de la capa activa.</p>
+<p>Con la tecla F7 abriremos el panel de estilo, y modificaremos el marcador simple por defecto a <strong>generador de geometrías</strong>. En el campo expresión, teclearemos lo siguiente:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>wedge_buffer($geometry,&quot;azimuth&quot;,55,50,5)
+</pre></div>
+</div>
+<div class="figure align-center">
+<img alt="_images/wedge4.gif" src="_images/wedge4.gif" />
+</div>
+<p>Una vez obtenida esta nueva simbología para cada uno de los puntos de la capa, que además nos indica la dirección hacia donde fue tomada la fotografía (gracias a la inclusión del valor de azimut), podemos añadir un nuevo elemento a la simbología: un <strong>marcador de imagen raster</strong>. Para ello, dentro del configurador de estilo, haremos un clic sobre el botón con una cruz verde para añadir un nuevo elemento, configuraremos que éste sea del tipo <em>Raster image marker</em>, y definiremos que cada punto deberá mostrar su correspondiente imagen, concatenando mediante una expresión, la ruta a la carpeta que contiene las imágenes, y el valor almacenado en el campo o columna <strong>[imagen]</strong>. Determinaremos que el tamaño del marcador de imagen será de <strong>20x20</strong>.</p>
+<div class="figure align-center">
+<img alt="_images/wedge5.gif" src="_images/wedge5.gif" />
+</div>
+<p>Ya para finalizar, y antes de aplicar una simbología o un estilo definitivo a los <em>wedge buffer</em>, podemos definir el comportamiento relativo a la rotación de las imágenes que estamos utilizando como marcadores, utilizando por ejemplo la siguiente expresión del tipo <strong>CASE</strong>.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CASE</span>
+<span class="k">WHEN</span> <span class="ss">&quot;azimuth&quot;</span> <span class="o">&gt;</span> <span class="mi">90</span> <span class="k">AND</span> <span class="ss">&quot;azimuth&quot;</span> <span class="o">&lt;</span> <span class="mi">270</span> <span class="k">THEN</span> <span class="mi">0</span>
+<span class="k">ELSE</span> <span class="ss">&quot;azimuth&quot;</span>
+<span class="k">END</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<img alt="_images/wedge6.gif" src="_images/wedge6.gif" />
+</div>
+<div class="figure align-center">
+<img alt="_images/wedge7.png" src="_images/wedge7.png" />
+</div>
+</div>
+</div>
+<div class="section" id="importacion-de-fotos-geolocalizadas">
+<h2>10. Importación de fotos geolocalizadas<a class="headerlink" href="#importacion-de-fotos-geolocalizadas" title="Link permanent a aquest títol">¶</a></h2>
+<p>Otra de las novedades que trae consigo QGIS 3.x es el algoritmo o herramienta para la importación directa de fotos geolocalizadas, de cualquier procedencia. El modo de ejecución es sumamente sencillo y se basa únicamente en seleccionar el algoritmo en cuestión, indicar la carpeta que contiene las imágenes a importar, y por ejemplo, definir que el símbolo que indica la ubicación de cada una de las fotos, sea la propia imagen haciendo uso nuevamente del método de simbolización <em>Raster image marker</em>, indicando que la ruta a las imágenes se encuentra dentro de la columna <strong>[photos]</strong>:</p>
+<div class="figure align-center">
+<img alt="_images/geotagged.gif" src="_images/geotagged.gif" />
+</div>
+</div>
+<div class="section" id="trabajando-con-datos-tipo-mesh">
+<h2>11. Trabajando con datos tipo MESH<a class="headerlink" href="#trabajando-con-datos-tipo-mesh" title="Link permanent a aquest títol">¶</a></h2>
+<div class="section" id="la-visualizacion-de-las-variables-o-capas-contenidas-en-un-archivo-mesh">
+<h3>11.1 La visualización de las variables o capas contenidas en un archivo <em>mesh</em><a class="headerlink" href="#la-visualizacion-de-las-variables-o-capas-contenidas-en-un-archivo-mesh" title="Link permanent a aquest títol">¶</a></h3>
+<p>La nueva versión de QGIS ya soporta la carga, visualización y el trabajo con datos tipo <em>mesh</em>, un tipo particular de capa en forma de malla que almacena o puede almacenar multitud de variables, especialmente utilizada en el campo de la meteorología y la climatología, hidrología, oceanografía, entre otros. QGIS ha incorporado la librería <a class="reference external" href="https://www.lutraconsulting.co.uk/blog/2018/10/18/mdal/">MDAL</a> desarollada por la empresa <em>Lutra Consulting</em>, lo que ha facilitado la oportunidad de manejar este tipo de datos, más allá de los vectores y los rasters. Además de la propia incorporación de esta funcionalidad, la instalación del complemento <strong>Crayfish</strong> posibilitará también la generación de gráficos y animaciones basadas en las características de dinámica y temporalidad de este tipo de datos.</p>
+<p>Empezaremos por cargar la capa <strong>MALAGA_ICON_EU_EWAM_20190524-00</strong> (que se encuentra entre los datos del taller), desde el gestor de fuentes de datos:</p>
+<div class="figure align-center">
+<img alt="_images/add_mesh.gif" src="_images/add_mesh.gif" />
+</div>
+<p>A continuación, con la tecla F7 abriremos el panel de edición de estilo, y empezaremos por seleccionar qué variable queremos representar y en base a qué paleta de colores. Para el presente caso, seleccionaremos la variable <strong>temperatura</strong> y aplicaremos una paleta de colores particular: <em>Create new color ramp &gt; Catalog: cpt-city &gt; Temperature &gt; temp-c</em>. Haremos a continuación un clic sobre el botón <em>Load</em> para aplicar la paleta en cuestión a nuestra capa de datos.</p>
+<div class="figure align-center">
+<img alt="_images/add_mesh2.gif" src="_images/add_mesh2.gif" />
+</div>
+<p>De vuelta a la pestaña de configuración de la variable a representar, donde habremos seleccionado la variable <strong>temperatura</strong>, podemos comprobar como existe un parámetro llamado <em>Dataset in Selected Group(s)</em> que nos permite escoger el momento temporal preciso que queremos visualizar. En el caso de la capa que tenemos cargada y visible, almacena datos para un período temporal de cinco días. Mediante el deslizador podemos pues seleccionar el momento preciso que vamos a representar:</p>
+<div class="figure align-center">
+<img alt="_images/add_mesh3.gif" src="_images/add_mesh3.gif" />
+</div>
+<p>Además de las variable que justo acabamos de cargar y simbolizar, relativa a la temperatura, los datos tipo <em>mesh</em> y este tipo de capa con la que estamos trabajando, también tiene la capacidad de almacenar variables relativas a, por ejemplo, la velocidad y la intensidad del viento. Así, en la pestaña en la que se muestran las variables o grupos de capas deberemos activar aquella que inicialmente muestra una flecha negra atenuada, y a continuación, dirigirnos a la pestaña correspondiente para adecuar las flechas de dirección e intensidad del viento, a la escala de visualización o a nuestro gusto:</p>
+<div class="figure align-center">
+<img alt="_images/add_mesh4.gif" src="_images/add_mesh4.gif" />
+</div>
+<p>También es posible modificar el color de los vectores de dirección del viento, además de definir una malla del tamaño deseado a partir del cual podemos controlar el número de vectores (flechas) que se muestran en cada visualización</p>
+<div class="figure align-center">
+<img alt="_images/add_mesh5.gif" src="_images/add_mesh5.gif" />
+</div>
+</div>
+<div class="section" id="el-complemento-crayfish-animaciones-y-graficos">
+<h3>11.2 El complemento <strong>Crayfish</strong>: animaciones y gráficos<a class="headerlink" href="#el-complemento-crayfish-animaciones-y-graficos" title="Link permanent a aquest títol">¶</a></h3>
+<p>Mediante la instalación de este complemento de QGIS, además de los aspectos que ya hemos visto con relación al trabajo y representación de datos tipo <em>mesh</em>, podremos generar y grabar animaciones temporales, así como diseñar y obtener diagramas o gráficos. Una vez instalado el complemento en cuestión (accesible desde el menú <em>Mesh &gt; Crayfish</em>) , si realizamos un clic con el botón derecho del mouse sobre la capa <em>mesh</em> cargada en el panel de capas, accederemos a dos nuevas herramientas: <em>Export animation</em> y <em>Plot</em>.</p>
+<p>Con la primera opción, podemos crear y guardar animaciones de nuestros datos definiendo adecuadamente los parámetros a representar (ancho y alto de la animación, período de tiempo a visualizar, <em>frames</em> por segundo, nombre del vídeo en formato <strong>.avi</strong> de salida, fuente del título, calidad de la animación, …). El resultado final, es el que se puede observar a continuación:</p>
+<div class="figure align-center">
+<img alt="_images/video_mesh.gif" src="_images/video_mesh.gif" />
+</div>
+<p>Por lo que respecta a la generación de gráficos (botón derecho sobre la capa + opción <em>Plot</em>), estos nos permiten por ejemplo, representar las oscilaciones de una variable cualquiera, como puede ser la propia temperatura, en cualquier punto de la capa (marcado en este caso con una X de color azul), y durante un período concreto de tiempo. En la imagen inferior, podemos ver la oscilación (prácticamente nula) del valor de la temperatura en el Mar de Alboran, a lo largo un período de 120 horas:</p>
+<div class="figure align-center">
+<img alt="_images/plot_mesh.png" src="_images/plot_mesh.png" />
+</div>
+<p>Si por contra realizamos esta misma consulta en el valle del Guadalquivir, en algún punto situado aproximadamente entre las poblaciones de Jaén y Andújar, podemos comprobar fácilmente como la oscilación térmica es mucho más acusada que en el caso anterior, para el mismo período de tiempo:</p>
+<div class="figure align-center">
+<img alt="_images/plot_mesh2.png" src="_images/plot_mesh2.png" />
+</div>
+</div>
+<div class="section" id="algebra-de-mapas-con-datos-mesh-la-mesh-calculator">
+<h3>11.3 Álgebra de mapas con datos <em>mesh</em>: la <em>Mesh Calculator</em><a class="headerlink" href="#algebra-de-mapas-con-datos-mesh-la-mesh-calculator" title="Link permanent a aquest títol">¶</a></h3>
+<p>Ya para finalizar, juntamente con la capacidad de manejar y representar datos tipo <em>mesh</em>, QGIS 3.x también ofrece la posibilidad de realizar determinadas operaciones y cálculos basados en álgebra de mapas con capas tipo <em>mesh</em>, del mismo modo en que ya venimos utilizando la calculadora raster para el trabajo con imágenes clásicas. La <em>calculadora mesh</em> es accesibles desde el menú <em>Mesh &gt; Mesh calculator</em>. Su funcionamiento es sencillo y no resulta para nada diferente de cualquier calculadora raster. Por ejemplo, en el siguiente ejemplo te mostramos como extraer aquellas zonas que durante un período de tres días, las temperaturas han estado permanentemente entre los 20 y los 30 grados centígrados. Según la expresión que definiremos, aquellas zonas que cumplan con la condición pasarán a tener valor <strong>1</strong> mientras que, el resto de zonas, pasarán a ser <strong>NODATA</strong>.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">if</span>  <span class="p">(</span>  <span class="ss">&quot;Temperature [C]&quot;</span>  <span class="o">&gt;=</span> <span class="mi">20</span>  <span class="k">and</span>   <span class="ss">&quot;Temperature [C]&quot;</span>  <span class="o">&lt;</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>  <span class="n">NODATA</span> <span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<img alt="_images/mesh_calculator.gif" src="_images/mesh_calculator.gif" />
+</div>
+<p>Alternativamente, si en lugar de asignar valor <strong>1</strong> a las zonas que cumplen con la consulta efectuada desde la calculadora, queremos que se conserven los valores originales de temperatura para cada punto, en este caso, deberemos sustituir la expresión anterior por la siguiente:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">if</span>  <span class="p">(</span>  <span class="ss">&quot;Temperature [C]&quot;</span>  <span class="o">&gt;=</span> <span class="mi">20</span>  <span class="k">and</span>   <span class="ss">&quot;Temperature [C]&quot;</span>  <span class="o">&lt;</span> <span class="mi">30</span><span class="p">,</span> <span class="ss">&quot;Temperature [C]&quot;</span><span class="p">,</span>  <span class="n">NODATA</span> <span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<img alt="_images/mesh_calculator2.png" src="_images/mesh_calculator2.png" />
+</div>
+<p>Todos los cálculos realizados mediante la calculadora <em>mesh</em>, se añaden automáticamente al grupo de variables de nuestra capa y a su vez, se van almacenando en nuestro sistema con el formato o extensión <strong>.dat</strong>. Este formato, no podrá cargarse directamente en QGIS como si de una capa cualquiera se tratara, sino que se almacenan con el propósito que puedan añadirse posteriormente a la capa <em>mesh</em>, siempre que sea preciso. Así, al cargar de nuevo la capa de tipo de <em>mesh</em> en un nuevo proyecto cualquiera, podemos adicionar el fichero <strong>.dat</strong>, a la capa original.</p>
+<div class="figure align-center">
+<img alt="_images/last_calc.gif" src="_images/last_calc.gif" />
+</div>
+</div>
+</div>
+<div class="section" id="escenas-3d-vistas-3d-de-qgis-vs-qgis2threejs">
+<h2>12. Escenas 3D: Vistas 3D de QGIS vs QGIS2THREEJS<a class="headerlink" href="#escenas-3d-vistas-3d-de-qgis-vs-qgis2threejs" title="Link permanent a aquest títol">¶</a></h2>
+<p>QGIS 3.x permite añadir nuevas vistas del mapa en 3D (nativas), desde las cuales podemos visualizar las capas del proyecto desde una perspectiva tridimensional. Las <strong>Vistas de mapa 3D</strong> son una alternativa más simple o más básica al complemento <strong>QGIS2THREEJS</strong>, que ya existía para la versión 2.x de QGIS. A continuación vamos a crear dos nuevas escenas 3D con estas dos alternativas para comparar las características y posibilidades de cada una de ellas.</p>
+<div class="section" id="preparar-la-cartografia-de-base">
+<h3>12.1 Preparar la cartografía de base<a class="headerlink" href="#preparar-la-cartografia-de-base" title="Link permanent a aquest títol">¶</a></h3>
+<p>Abrimos un nuevo proyecto de QGIS y definimos el <strong>EPSG:25831</strong> correspondiente al SRC UTM ETRS89/UTM zone 31N. En las propiedades del proyecto definimos la ruta a la carpeta que contiene los datos del proyecto y le asignamos un nombre a este:</p>
+<div class="figure align-center">
+<img alt="_images/3D_1.gif" src="_images/3D_1.gif" />
+</div>
+<p>Cargamos los archivos raster correspondientes al MDT 2x2 de la zona correspondiente a Canet d’Adri (Girona), que se encuentran en la carpeta MET_2x2 en formato <strong>.txt</strong>. A continuación, unimos todas las capas raster utilizando el algoritmo <em>Merge</em> desde el apartado <em>Locator bar</em>.</p>
+<div class="figure align-center">
+<img alt="_images/3D_2.gif" src="_images/3D_2.gif" />
+</div>
+<p>Cargamos la capa con los límites municipales del área de trabajo <strong>bm50mv33sh1fpm1_20160101_0.shp</strong>. Seleccionamos el municipio de Canet d’Adri y en el apartado <em>Locator bar</em>, introducimos la cadena de texto <strong>extract</strong> para seleccionar el geoproceso <em>Extract Selected Features</em>, mediante el cual obtenemos una capa temporal con el polígono correspondiente al término municipal de Canet d’Adri. Seguidamente hacemos permanente (clic con el botón derecho del <em>mouse</em> sobre la capa temporal + <em>Make Permanent</em>) la capa que contiene el término municipal y le aplicamos un estilo sin relleno.</p>
+<div class="figure align-center">
+<img alt="_images/3D_3.gif" src="_images/3D_3.gif" />
+</div>
+<p>A continuación recortamos el MDT con el límite municipal de Canet d’Adri. Para ello utilizaremos el geoproceso <em>Clip raster by Mask Layer</em>.</p>
+<div class="figure align-center">
+<img alt="_images/3D_4.gif" src="_images/3D_4.gif" />
+</div>
+</div>
+<div class="section" id="aplicar-estilos-al-mdt">
+<h3>12.2 Aplicar estilos al MDT<a class="headerlink" href="#aplicar-estilos-al-mdt" title="Link permanent a aquest títol">¶</a></h3>
+<p>Aplicaremos a nuestro MDT una paleta de colores combinada con un relieve sombreado. Con la tecla F7 activamos el panel de control de estilos de la capa. También se puede hacer abriendo las propiedades de la capa, pero la ventaja de la primera es que el estilo se va actualizando directamente a medida que cambiamos los parámetros de visualización. En la parte superior de la ventana de estilos seleccionamos nuestro MDT y como estilo de representación, escogemos <strong>Singleband pseudocolor</strong> y aplicamos la paleta de color <strong>wiki-schwarzwald-cont151 colors-continous</strong> que encontraremos en <em>Color ramp &gt; Create New Color Ramp &gt; Catalog: cpt-city &gt; Topography</em>.</p>
+<p>Duplicamos el MDT haciendo clic con el botón derecho sobre la capa, en el panel de capas y seleccionando la opción <em>Duplicate Layer*</em>. Sobre la capa duplicada aplicamos el estilo de representación <strong>Hillshade</strong>. En el apartado <em>Layer Rendering</em> modificaremos el modo de mezcla a <strong>Multiply</strong>. De esta forma logramos que el estilo de relieve sombreado se combine o mezcle con el estilo aplicado al MDT. En caso de no apreciarse correctamente la combinación de estilos, arrastramos la capa de relieve sombreado, por encima del MDT.</p>
+<div class="figure align-center">
+<img alt="_images/3D_5.gif" src="_images/3D_5.gif" />
+</div>
+</div>
+<div class="section" id="crear-una-capa-de-cursos-fluviales">
+<h3>12.3 Crear una capa de cursos fluviales<a class="headerlink" href="#crear-una-capa-de-cursos-fluviales" title="Link permanent a aquest títol">¶</a></h3>
+<p>A continuación vamos a crear una capa de cursos fluviales mediante el cálculo de la red de drenaje extraída del propio MDT. Para ello utilizaremos el algoritmo de GRASS <em>r.stream.extract</em>. Para localizar este comando podemos hacer uso de la barra de localización. Ejecutamos <em>r.stream.extract</em> e introducimos los siguientes parámetros:</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Input map</em>: <strong>MDT_Adri</strong></li>
+<li><em>Minimum flow accumulation for streams</em>: <strong>5000</strong></li>
+<li><em>Delete stream segments shorter than cells</em>: <strong>2500</strong></li>
+<li><em>v.out.ogr output type</em>: <strong>line</strong></li>
+<li><em>Unique streams ids (vect)</em>: <strong>Cursos_fluviales.geojson</strong></li>
+</ul>
+</div></blockquote>
+<div class="figure align-center">
+<img alt="_images/3D_6.gif" src="_images/3D_6.gif" />
+</div>
+<p>A la capa resultante le aplicamos un estilo para representar adecuadamente los ríos.</p>
+<div class="figure align-center">
+<img alt="_images/3D_7.gif" src="_images/3D_7.gif" />
+</div>
+</div>
+<div class="section" id="generar-nueva-vista-3d">
+<h3>12.4 Generar Nueva Vista 3D<a class="headerlink" href="#generar-nueva-vista-3d" title="Link permanent a aquest títol">¶</a></h3>
+<p>Una vez tenemos la cartografía de base, vamos a visualizarla en una vista 3D.</p>
+<p>Desde el menú <em>View</em>, seleccionamos <strong>New 3D Map View</strong>. En la vista 3D haremos un clic en el botón <em>Configure</em> e introduciremos los siguientes parámetros:</p>
+<ul class="simple">
+<li><em>Elevation</em>: <strong>MDT_Adri</strong></li>
+<li><em>Vertical scale</em>: <strong>1.5</strong></li>
+</ul>
+<p>Una vez en la vista podemos navegar sobre ella utilizando los siguientes controles:</p>
+<ul class="simple">
+<li><em>Rueda central del ratón*</em> para aumentar/disminuir el zoom.</li>
+<li><strong>Mayúscula + botón izquierdo</strong> para cambiar la perspectiva.</li>
+<li><strong>Control + botón izquierdo</strong> para cambiar la panorámica.</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/3D_8.gif" src="_images/3D_8.gif" />
+</div>
+</div>
+<div class="section" id="crear-un-visor-3d-con-qgis2threejs-la-preparacion-de-los-datos">
+<h3>12.5 Crear un visor 3D con QGIS2threejs: la preparación de los datos<a class="headerlink" href="#crear-un-visor-3d-con-qgis2threejs-la-preparacion-de-los-datos" title="Link permanent a aquest títol">¶</a></h3>
+<p><strong>QGIS2threejs</strong> es un complemento ya existente en versiones anteriores a QGIS 3.x y que permite construir escenas tridimensionales y exportarlas a un visor en formato HTML.</p>
+<div class="section" id="anadir-cartografia-de-referencia">
+<h4>12.5.1 Añadir cartografía de referencia<a class="headerlink" href="#anadir-cartografia-de-referencia" title="Link permanent a aquest títol">¶</a></h4>
+<p>En este punto mejoraremos la visualización de la vista añadiendo cartografía de referencia y modificando algunos parámetros de visualización de las capas que acabarán componiendo la escena 3D.</p>
+<p>En primer lugar añadiremos una capa de cartografía de referencia. En concreto, añadiremos la cartografía de OpenStreetMap. Para ello debemos instalar el complemento <strong>QuickMapServices</strong> y cargar la capa <strong>OSM Standard</strong> desde el menú <em>Web &gt; QuickMapServices &gt; OSM</em></p>
+<p>Modificamos las propiedades de visualización de la capa <strong>Canet_Adri_LM</strong>, que es la que contiene el límite municipal:</p>
+<ul class="simple">
+<li><strong>Inverted polygons</strong> como estilo de representación de la capa.</li>
+<li>En <em>Symbol layer type</em> seleccionamos <strong>Shapeburst fill</strong>.</li>
+<li>En <em>Gradient Colors</em> seleccionamos la opción <strong>Two colors</strong> y creamos un gradiente de color marrón claro a amarillo pálido.</li>
+<li>En el apartado <em>Shading Style</em> definimos un valor para el parámetro <strong>Set distance</strong> de <strong>5</strong>, y un valor de <strong>10</strong> para el parámetro <strong>Blur strength</strong>.</li>
+<li>En <em>Layer rendering</em> definimos un <strong>60%</strong> de opacidad.</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/3D_9.gif" src="_images/3D_9.gif" />
+</div>
+<p>Duplicaremos a continuación la capa <strong>Canet_Adri_LM</strong>, la arrastramos arriba del panel de capas y cambiamos el estilo según los parámetros siguientes:</p>
+<ul class="simple">
+<li>Seleccionamos <strong>Single symbol</strong> como estilo de representación de la capa.</li>
+<li>En <em>Symbol layer type</em> seleccionamos <strong>Outline: Simple line</strong>.</li>
+<li>En <em>Color</em> asignamos un color marrón.</li>
+<li>En <em>Stroke width</em> aplicamos al perímetro un grosor de <strong>1</strong>.</li>
+<li>En <em>Layer rendering</em> definimos un valor del <strong>80%</strong> de opacidad, al perímetro.</li>
+<li>Activamos la opción <em>Draw effects</em> y seleccionamos el efecto <strong>Drop shadow</strong>.</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/3D_10.gif" src="_images/3D_10.gif" />
+</div>
+</div>
+<div class="section" id="anadir-una-capa-de-edificaciones">
+<h4>12.5.2 Añadir una capa de edificaciones<a class="headerlink" href="#anadir-una-capa-de-edificaciones" title="Link permanent a aquest títol">¶</a></h4>
+<p>El siguiente paso consiste en añadir una capa de edificaciones del municipio, que serán representados como volumetrías sobre la escena 3D. La capa vectorial de edificaciones la obtendremos de OpenStreetMap y para ello utilizaremos un complemento llamado <strong>QuickOSM</strong>.</p>
+<ul class="simple">
+<li>Una vez instalado el complemento ejecutaremos <strong>QuickOSM</strong> que encontraremos en el menú <em>Vector</em> o en forma de herramienta representado una lupa blanca sobre fondo verde e introduciremos los siguientes parámetros:</li>
+<li><em>Key</em> = <strong>building</strong></li>
+<li><em>In</em> = <strong>Canet d’Adri_LM</strong></li>
+<li><em>Advanced</em>: Dejamos seleccionado únicamente <strong>Way</strong>, <strong>Multilinestrings</strong>, <strong>Relation</strong>, <strong>Multipolygons</strong></li>
+<li>Ejecutamos <strong>Run query</strong></li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/3D_11.gif" src="_images/3D_11.gif" />
+</div>
+<p>Para poder hacer una extrusión de los edificios en el escenario 3D podemos indicar una altura constante para todos, o bien indicar un campo que contenga la altura de cada uno. Como en este caso no tenemos dicha altura podemos calcular una aleatoria a partir de la siguiente fórmula:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="o">**</span><span class="n">Cota</span> <span class="o">/</span> <span class="mi">1000</span> <span class="n">X</span> <span class="mi">2</span><span class="o">**</span>
+</pre></div>
+</div>
+<p>Donde cota sería la cota altimétrica en la que se encuentra cada edificación.</p>
+<p>Para calcular la cota altimétrica utilizaremos la herramienta <strong>Zonal statistics</strong> la cual nos permite calcular las estadísticas de los valores de las celdas coincidentes con un área o polígono. En este caso solo nos interesa calcular la altura media de todas las celdas.</p>
+<p>En <em>Locator bar</em> buscamos y ejecutamos el comando <strong>Zonal statistics</strong> e introducimos los siguientes parámetros:</p>
+<ul class="simple">
+<li><em>Raster Layer</em> = <strong>MDT_Adri</strong></li>
+<li><em>Vector layer containing zones</em> = <strong>building_Canet d’Adri</strong></li>
+<li><em>Statistics to calculate</em> = <strong>Mean</strong></li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/3D_12.gif" src="_images/3D_12.gif" />
+</div>
+<p>Con la capa <strong>building_Canet d’Adri</strong> activa, abrimos la calculadora de campos, creamos un campo nuevo y aplicamos la siguiente fórmula:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;_mean&quot;</span>  <span class="o">/</span> <span class="mi">100</span> <span class="o">*</span> <span class="mi">2</span><span class="o">``</span>
+</pre></div>
+</div>
+<div class="figure align-center">
+<img alt="_images/3D_13.gif" src="_images/3D_13.gif" />
+</div>
+<p>Hacemos permanente la capa <strong>building_Canet d’Adri</strong> haciendo clic sobre ella con el botón derecho y seleccionando <em>Make permanent</em>.</p>
+</div>
+</div>
+<div class="section" id="crear-la-escena-3d">
+<h3>12.6 Crear la escena 3D<a class="headerlink" href="#crear-la-escena-3d" title="Link permanent a aquest títol">¶</a></h3>
+<p>Una vez preparada la vista con las capas podemos crear la escena 3D. Si tenemos instalado el complemento <strong>QGIS2threejs</strong> podemos activar el exportador de escenas 3D desde el menú <em>Web</em> o la herramienta que representa un triángulo verde con una línea naranja debajo. Con ello, abriremos la ventana donde podremos definir las propiedades de visualización de la escena.</p>
+<p>En caso de no estarlo, activamos la opción <em>Preview</em> en la parte inferior derecha de la ventana. En el apartado <em>Layers</em> activamos el MDE <strong>MDT_Adri</strong> y hacemos doble clic sobre él para abrir sus propiedades donde definimos los siguientes parámetros:</p>
+<ul class="simple">
+<li>En <em>Geometry</em> activamos la opción <strong>Surrondings</strong> que mostrará las capas que forman parte del escenario más allá de la extensión del MDE.</li>
+<li>En <em>Material</em> activamos la opción <strong>Layer image</strong> y en <em>Select layer(s)</em> seleccionamos las capas <strong>OSM Standard</strong>, <strong>MDT_Adri</strong>, <strong>Canet_Adri_LM</strong>, <strong>Canet_Adri_LM copy</strong>. Estas serán las capas que serán renderizadas y por tanto serán la cartografía de base de la escena que no podrá ser modificada. Haciendo clic en la pestaña <em>Preview</em> podemos hacer una previsualización de la capa. Dejamos el resto de parámetros por defecto y hacemos un clic en <strong>Apply</strong>.</li>
+</ul>
+<p>Vamos a <strong>Scene Settings</strong> en el menú <em>Scene</em> y en <em>Vertical exaggeration</em> indicamos un valor de <strong>1,5</strong>.</p>
+<div class="figure align-center">
+<img alt="_images/3D_14.gif" src="_images/3D_14.gif" />
+</div>
+<p>Activamos la capa <strong>cursos_fluviales</strong> y abrimos sus propiedades:</p>
+<ul class="simple">
+<li>En <em>Mode</em> seleccionamos <strong>Relative to MDT_Adri layer</strong>.</li>
+<li>En <em>Altitude</em> indicamos <strong>25</strong>.</li>
+<li>Realizamos un clic en <strong>Apply</strong> y <strong>OK</strong>.</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/3D_15.gif" src="_images/3D_15.gif" />
+</div>
+<ul class="simple">
+<li>Activamos la capa <strong>Edificaciones_Canet</strong> y doble clic para abrir las propiedades:</li>
+<li>En <em>Object type</em> seleccionamos <strong>Extruded</strong>.</li>
+<li>En el apartado <em>Z_coordinate</em>, en <em>Mode</em>, seleccionamos <strong>Relative to MDT_Adri layer</strong> e indicamos valor <strong>0</strong>.</li>
+<li>En <em>Style</em> indicamos los siguientes parámetros:
+* <em>Color</em> = <strong>Random</strong>.
+* <em>Height</em> = <strong>Altura</strong>.
+* <em>Border color</em> = <strong>Feature style</strong></li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/3D_16.gif" src="_images/3D_16.gif" />
+</div>
+<p>Podemos navegar por la escena 3D utilizando los siguientes controles:</p>
+<ul class="simple">
+<li>Rueda central del ratón para aumentar/disminuir el zoom.</li>
+<li>Botón izquierdo para cambiar la orientación y perspectiva.</li>
+<li>Control + botón izquierdo para desplazarnos dentro de la escena sin cambiar la orientación y perspectiva.</li>
+</ul>
+<p>Para terminar, añadiremos un título y autor a la escena. En el menú <em>Scene</em>, seleccionamos <strong>Decorations</strong> y <strong>Header/Footer Labels</strong></p>
+<ul class="simple">
+<li><em>Header Label text</em>: <strong>Paraje del Massís de Rocacorba (Gironès)</strong></li>
+<li><em>Footer Label text</em>: <strong>Jornadas de SIG Libre, Girona (2019)</strong></li>
+</ul>
+</div>
+<div class="section" id="exportar-escena-3d-a-web">
+<h3>12.7. Exportar escena 3D a Web<a class="headerlink" href="#exportar-escena-3d-a-web" title="Link permanent a aquest títol">¶</a></h3>
+<p>Finalmente vamos a exportar la escena a un visor 3D en formato HTML.</p>
+<p>En el menú <strong>File</strong> seleccionamos <strong>Export to Web…</strong>. Indicamos la carpeta de destino, el nombre del archivo índice del HTML y escogemos la plantilla <strong>3D Viewer with dat-gui panel</strong>. Esta plantilla, incluye un panel donde podemos activar o desactivar capas de la escena, y aplicar transparencias entre otras opciones.</p>
+<div class="figure align-center">
+<img alt="_images/3D_17.gif" src="_images/3D_17.gif" />
+</div>
+<hr class="docutils" />
+<p><em>Ferran Orduña y Lluís Vicens (SIGTE - Universitat de Girona), Jornadas de SIG Libre, Girona, 2019. (CC-BY-SA)</em></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo_SIGTE.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Tabla de contenidos</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Taller: Novedades de QGIS, desde “Girona” hasta “Noosa”</a><ul>
+<li><a class="reference internal" href="#la-interfaz-grafica-de-usuario">1. La interfaz gráfica de usuario</a><ul>
+<li><a class="reference internal" href="#ui-theme">1.1 UI Theme</a></li>
+<li><a class="reference internal" href="#locator-bar-una-herramienta-de-busqueda-para-casi-todo">1.2 <em>Locator Bar</em>: una herramienta de búsqueda para casi todo</a><ul>
+<li><a class="reference internal" href="#busqueda-de-un-elemento-de-cualquier-capa-o-de-la-capa-activa">1.2.1 Búsqueda de un elemento de cualquier capa, o de la capa activa.</a></li>
+<li><a class="reference internal" href="#busqueda-de-un-algoritmo">1.2.2 Búsqueda de un algoritmo</a></li>
+<li><a class="reference internal" href="#busqueda-de-algoritmos-de-edicion-directa-de-entidades">1.2.3 Búsqueda de algoritmos de edición directa de entidades</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nuevo-browser-el-explorador-de-ficheros-definitivo">1.3 Nuevo <em>Browser</em>: el explorador de ficheros definitivo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sobre-los-datos-y-el-formato-de-los-datos">2. Sobre los datos y el formato de los datos</a></li>
+<li><a class="reference internal" href="#sobre-las-propiedades-del-proyecto-y-el-canvas">3. Sobre las propiedades del proyecto y el <em>canvas</em></a></li>
+<li><a class="reference internal" href="#mejoras-en-la-visualizacion-de-datos-simbolizacion">4. Mejoras en la visualización de datos: simbolización</a><ul>
+<li><a class="reference internal" href="#alternativa-a-la-clasificacion-por-reglas-merge-categories">4.1 Alternativa a la clasificación por reglas: <em>Merge Categories</em></a></li>
+<li><a class="reference internal" href="#nuevas-opciones-para-simbologia-de-puntos-point-cluster-renderer">4.2 Nuevas opciones para simbología de puntos: <em>Point cluster renderer</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nuevas-opciones-de-join-1-n">5. Nuevas opciones de Join 1:n</a></li>
+<li><a class="reference internal" href="#edicion-de-datos-vectoriales">6. Edición de datos vectoriales</a></li>
+<li><a class="reference internal" href="#edicion-manual-de-etiquetas">7. Edición manual de etiquetas</a></li>
+<li><a class="reference internal" href="#trabajo-con-formularios-de-datos">8. Trabajo con formularios de datos</a></li>
+<li><a class="reference internal" href="#wedge-buffer-capa-fisica-vs-simbologia">9. <em>Wedge buffer</em>: capa física vs. simbología</a><ul>
+<li><a class="reference internal" href="#la-preparacion-de-los-datos">9.1 La preparación de los datos</a></li>
+<li><a class="reference internal" href="#el-algoritmo-wedge-buffer">9.2 El algoritmo <em>wedge buffer</em></a></li>
+<li><a class="reference internal" href="#la-simbolizacion-mediante-wedge-buffer">9.3 La simbolización mediante <em>wedge buffer</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#importacion-de-fotos-geolocalizadas">10. Importación de fotos geolocalizadas</a></li>
+<li><a class="reference internal" href="#trabajando-con-datos-tipo-mesh">11. Trabajando con datos tipo MESH</a><ul>
+<li><a class="reference internal" href="#la-visualizacion-de-las-variables-o-capas-contenidas-en-un-archivo-mesh">11.1 La visualización de las variables o capas contenidas en un archivo <em>mesh</em></a></li>
+<li><a class="reference internal" href="#el-complemento-crayfish-animaciones-y-graficos">11.2 El complemento <strong>Crayfish</strong>: animaciones y gráficos</a></li>
+<li><a class="reference internal" href="#algebra-de-mapas-con-datos-mesh-la-mesh-calculator">11.3 Álgebra de mapas con datos <em>mesh</em>: la <em>Mesh Calculator</em></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#escenas-3d-vistas-3d-de-qgis-vs-qgis2threejs">12. Escenas 3D: Vistas 3D de QGIS vs QGIS2THREEJS</a><ul>
+<li><a class="reference internal" href="#preparar-la-cartografia-de-base">12.1 Preparar la cartografía de base</a></li>
+<li><a class="reference internal" href="#aplicar-estilos-al-mdt">12.2 Aplicar estilos al MDT</a></li>
+<li><a class="reference internal" href="#crear-una-capa-de-cursos-fluviales">12.3 Crear una capa de cursos fluviales</a></li>
+<li><a class="reference internal" href="#generar-nueva-vista-3d">12.4 Generar Nueva Vista 3D</a></li>
+<li><a class="reference internal" href="#crear-un-visor-3d-con-qgis2threejs-la-preparacion-de-los-datos">12.5 Crear un visor 3D con QGIS2threejs: la preparación de los datos</a><ul>
+<li><a class="reference internal" href="#anadir-cartografia-de-referencia">12.5.1 Añadir cartografía de referencia</a></li>
+<li><a class="reference internal" href="#anadir-una-capa-de-edificaciones">12.5.2 Añadir una capa de edificaciones</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#crear-la-escena-3d">12.6 Crear la escena 3D</a></li>
+<li><a class="reference internal" href="#exportar-escena-3d-a-web">12.7. Exportar escena 3D a Web</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+
+
+    <div class="footer">
+      &copy; <a href=https://creativecommons.org/licenses/by-sa/3.0/> CC-BY-SA, 2019 SIGTE - Universitat de Girona - Jornadas de SIG Libre.</a>
+    </div>
+  </body>
+</html>
