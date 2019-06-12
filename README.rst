@@ -1,7 +1,7 @@
 *******************************************************
 Taller: Novedades de QGIS, desde 'Girona' hasta 'Noosa'
 *******************************************************
-El material de este taller ha sido creado por Ferran Orduña y Lluís Vicens (SIGTE - Universitat de Girona) y está sujeto a licencia `CC-BY-SA <https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES>`_
+El material de este taller ha sido creado por Ferran Orduña y Lluís Vicens (`SIGTE - Universitat de Girona <https://www.udg.edu/sigte>`_) y está sujeto a licencia `CC-BY-SA <https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES>`_
 
 El taller, impartido en el marco de las Jornadas de SIG Libre de 2019, pretende dar a conocer algunas de las novedades y mejoras que presenta QGIS desde que se lanzó la primera *release* de la rama 3.x (Girona 3.0), y hasta la actualidad (Noosa 3.6). Entre estos dos hitos, se suceden las versiones 3.2 (Bonn) y 3.4 (Madeira). Esta última es la actual LTR o versión *Long Term Release*.
 
